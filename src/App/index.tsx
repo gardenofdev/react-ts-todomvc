@@ -6,7 +6,7 @@ import Filters from './Filters'
 import NewInput from './NewInput'
 import TodoList from './TodoList'
 
-const App: React.FC = () => {
+export default function App() {
   const appState = useRecoilValue(recoilState)
 
   useEffect(() => {
@@ -24,5 +24,3 @@ const App: React.FC = () => {
     </>
   )
 }
-
-export default App

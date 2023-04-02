@@ -1,4 +1,4 @@
-function Copyright() {
+export default function Copyright() {
   return (
     <footer className="info">
       <p>
@@ -10,5 +10,3 @@ function Copyright() {
     </footer>
   )
 }
-
-export default Copyright

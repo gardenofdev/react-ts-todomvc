@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil'
 import { recoilState } from '../../todo'
 import Item from './Item'
 
-const TodoList: React.FC = () => {
+export default function TodoList() {
   const [appState, setAppState] = useRecoilState(recoilState)
   const path = useLocation().pathname
 
@@ -45,5 +45,3 @@ const TodoList: React.FC = () => {
     </section>
   )
 }
-
-export default TodoList

@@ -5,17 +5,17 @@ import { wrapWithRecoilRoot } from '../../testUtils'
 import NewInput from './'
 
 describe('NewInput', () => {
-  test('should render <NewInput/> correctly', () => {
+  test('should render <NewInput/> correctly', async () => {
     render(wrapWithRecoilRoot(<NewInput />))
     const input = screen.getByTestId('new-todo-input-text') as HTMLInputElement
 
     screen.getByText('todos')
     screen.getByPlaceholderText('What needs to be done?')
 
-    userEvent.type(input, 'something to do')
+    await userEvent.type(input, 'something to do')
     expect(input.value).toBe('something to do')
 
-    userEvent.keyboard('[enter]')
+    await userEvent.keyboard('[enter]')
     expect(input.value).toBe('')
   })
 })

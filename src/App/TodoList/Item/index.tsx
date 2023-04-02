@@ -6,7 +6,7 @@ interface Props {
   todo: Todo
 }
 
-const Item: React.FC<Props> = ({ todo }) => {
+export default function Item({ todo }: Props) {
   const [appState, setAppState] = useRecoilState(recoilState)
   const [state, setState] = useState({ onEdit: false })
   const editRef = createRef<HTMLInputElement>()
@@ -82,5 +82,3 @@ const Item: React.FC<Props> = ({ todo }) => {
     </li>
   ) : null
 }
-
-export default Item

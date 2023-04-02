@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import { recoilState } from '../../todo'
 
-const Filters: React.FC = () => {
+export default function Filters() {
   const [appState, setAppState] = useRecoilState(recoilState)
 
   const completedCount = appState.todoList.filter((t) => t.completed).length
@@ -52,5 +52,3 @@ const Filters: React.FC = () => {
     </footer>
   )
 }
-
-export default Filters

@@ -3,7 +3,7 @@ import { useSetRecoilState } from 'recoil'
 import { recoilState, Todo } from '../../todo'
 import { UUID } from '../../utils'
 
-function NewInput() {
+export default function NewInput() {
   const setAppState = useSetRecoilState(recoilState)
   const [inputValue, setInputValue] = useState('')
   const editRef = createRef<HTMLInputElement>()
@@ -52,4 +52,3 @@ function NewInput() {
   )
 }
 
-export default NewInput
